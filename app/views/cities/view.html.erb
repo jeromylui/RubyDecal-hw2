@@ -1,0 +1,13 @@
+<% if $cities.empty? %>
+  <h1>We don't have any cities stored. Try to create some first.</h1>
+  <p><%= link_to "Add New City", {:action => 'new' }%></p>
+<% else %>
+  <% @cities.each do |city| %>
+    <%= city.name %>
+    <%= city.landmark %>
+    <%= city.population %>
+    <%= city.weather %>
+    <p><%= link_to "Update", {:action => 'update',  name: city.name, landmark: city.landmark, population: city.population} %></p>
+  <% end %>
+  <p><%= link_to "Add New City", {:action => 'new' }%></p>
+<% end %>

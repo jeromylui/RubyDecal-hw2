@@ -1,0 +1,6 @@
+<%= form_with local: true, method: "post", :action => 'update_post' do |f| %>
+  City<%= f.text_field :name, readonly: true, value: @name, :placeholder => @name %><br>
+  Population<%= f.text_field :population, :placeholder => @population %><br>
+  Landmark<%= f.text_field :landmark, :placeholder => @landmark %><br>
+  <%= f.submit "Update" %>
+<% end %>

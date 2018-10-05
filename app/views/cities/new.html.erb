@@ -1,0 +1,6 @@
+<%= form_with local: true, method: "post", :action => 'create' do |f| %>
+  <%= f.text_field :name, :required => true, :placeholder => "City Name" %><br>
+  <%= f.text_field :population, :required => true, :placeholder => "Population" %><br>
+  <%= f.text_field :landmark, :required => true, :placeholder => "Landmark" %><br>
+  <%= f.submit "Create City" %>
+<% end %>
